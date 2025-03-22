@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <title>Page d'accueil</title>
+</head>
+<body>
+    <div id="container">
+        <!-- Sidebar -->
+        <aside id="sidebar">
+            <div class="sidebar-header">
+                <h2>Mon Profil</h2>
+                <img src="https://via.placeholder.com/80" alt="Avatar" class="avatar">
+                <p><strong>Nom d'utilisateur</strong></p>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#"><i class="fas fa-home"></i> Accueil</a></li>
+                    <li><a href="#"><i class="fas fa-search"></i> Rechercher</a></li>
+                    <li><a href="#"><i class="fas fa-shopping-cart"></i> Panier (3)</a></li>
+                    <li><a href="#"><i class="fas fa-cogs"></i> Paramètres</a></li>
+                    <li><a href="#"><i class="fas fa-sign-out-alt"></i> Déconnexion</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <div id="main-content">
+            <header>
+                <h1>Recherche de Produits</h1>
+                <div>
+                    <input type="text" id="search" placeholder="Rechercher un produit...">
+                    <select id="sort">
+                        <option value="brand">Trier par Marque</option>
+                        <option value="price">Trier par Prix</option>
+                    </select>
+                    <button id="searchButton"><i class="fas fa-search"></i>Rechercher</button>
+                </div>
+            </header>
+            <main>
+                <h2>Résultats de la recherche</h2>
+                <div id="results">
+                    <!-- Exemple de produit -->
+                    <div class="result-item">
+                        <img src="https://via.placeholder.com/300x200" alt="Produit Exemple">
+                        <h3>Nom du Produit</h3>
+                        <p>Description courte du produit ici.</p>
+                        <p class="price">€15.99</p>
+                        <button><i class="fas fa-cart-plus"></i> Ajouter au panier</button>
+                    </div>
+
+                    <!-- Exemple de produit -->
+                    <div class="result-item">
+                        <img src="https://via.placeholder.com/300x200" alt="Produit Exemple">
+                        <h3>Autre Produit</h3>
+                        <p>Description du produit ici.</p>
+                        <p class="price">€20.99</p>
+                        <button><i class="fas fa-cart-plus"></i> Ajouter au panier</button>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
