@@ -20,4 +20,10 @@ function getProduits($categorie = null, $marque = null, $prixMax = 100) {
     $stmt->execute($params);
     return $stmt->fetchAll();
 }
+$page = isset($_GET['page']) ? (int)$_GET['page'] : 1;
+$limite = 10;
+$offset = ($page - 1) * $limite;
+
+$stmt = $pdo->prepare("SELECT * FROM articles LIMIT ? OFFSET ?");
+$stmt->execute([$limite, $offset]);
 ?>
