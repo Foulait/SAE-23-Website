@@ -1,5 +1,5 @@
 <?php include '../includes/header.php'; ?>
-
+<?php include_once '../includes/bdd.php';?>
 <main class="container">
     <h1>Votre Panier</h1>
     
