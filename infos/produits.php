@@ -26,4 +26,11 @@ $offset = ($page - 1) * $limite;
 
 $stmt = $pdo->prepare("SELECT * FROM articles LIMIT ? OFFSET ?");
 $stmt->execute([$limite, $offset]);
+
+<div class="pagination">
+    <?php for ($i = 1; $i <= $nombre_pages; $i++): ?>
+        <a href="?page=<?= $i ?>" class="<?= $i == $page ? 'active' : '' ?>"><?= $i ?></a>
+    <?php endfor; ?>
+</div>
+
 ?>
