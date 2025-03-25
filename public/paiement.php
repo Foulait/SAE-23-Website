@@ -1,5 +1,5 @@
 // fonction utilisée pour vérifier les codes de cartes bancaire il faut l'intégrer à la page de paiement.
-
+<php include_once '../includes/bdd.php';?>
 function luhnValidation($numero) {
     $sum = 0;
     $len = strlen($numero);
