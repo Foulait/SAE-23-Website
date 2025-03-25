@@ -1,5 +1,6 @@
 <?php include '../includes/header.php'; ?>
-
+include_once '../includes/bdd.php';
+include_once '../includes/auth.php';
 <main class="container auth-container">
     <div class="tabs">
         <button class="tab-link active" data-tab="login">Connexion</button>
