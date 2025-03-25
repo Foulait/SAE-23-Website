@@ -40,7 +40,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <textarea placeholder="Adresse de livraison"></textarea>
         <button type="submit" class="btn">S'inscrire</button>
     </form>
+    <form method="POST">
+    <input type="hidden" name="csrf_token" value="<?= genererTokenCSRF() ?>">
+    <!-- ... autres champs ... -->
+    </form>
 </main>
-
 <script src="../public/js/script.js"></script>
 <?php include '../includes/footer.php'; ?>
