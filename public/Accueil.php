@@ -1,5 +1,6 @@
-<?php include '../includes/header.php'; ?>
-
+<?php include '../includes/header.php'; 
+include_once '../includes/bdd.php';
+?>
 <main class="container">
     <!-- Filtres -->
     <aside class="filters">
