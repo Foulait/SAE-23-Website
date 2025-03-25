@@ -1,26 +1,42 @@
 <?php include '../includes/header.php'; ?>
 
-<!-- Formulaire de recherche -->
-<form action="accueil.php" method="GET">
-  <select name="categorie">
-    <option value="fournitures">Fournitures Scolaires</option>
-  </select>
-  <input type="submit" value="Rechercher">
-</form>
+<main class="container">
+    <!-- Filtres -->
+    <aside class="filters">
+        <h2>Filtrer par :</h2>
+        <form id="filterForm">
+            <div class="filter-group">
+                <label>Catégorie :</label>
+                <select name="categorie">
+                    <option value="fournitures">Fournitures Scolaires</option>
+                </select>
+            </div>
+            
+            <div class="filter-group">
+                <label>Marque :</label>
+                <input type="text" name="marque">
+            </div>
+            
+            <div class="filter-group">
+                <label>Prix max :</label>
+                <input type="range" name="prix" min="0" max="100" value="50">
+            </div>
+        </form>
+    </aside>
 
-<!-- Affichage des produits -->
-<div class="produits">
-  <?php
-  // Connexion à la BDD et requête SQL (ex: SELECT * FROM articles WHERE categorie = 'fournitures')
-  // Boucle pour afficher chaque produit
-  foreach ($produits as $produit) {
-    echo "<div class='produit'>";
-    echo "<h3>{$produit['nom']}</h3>";
-    echo "<p>Prix : {$produit['prix']} €</p>";
-    echo "<a href='panier.php?action=add&id={$produit['id_article']}'>Ajouter au panier</a>";
-    echo "</div>";
-  }
-  ?>
-</div>
+    <!-- Liste des produits -->
+    <section class="product-grid">
+        <!-- Exemple de produit -->
+        <article class="product-card">
+            <img src="../public/img/crayons.jpg" alt="Crayons">
+            <h3>Pack de crayons HB</h3>
+            <p class="marque">Marque : Bic</p>
+            <p class="prix">5.99 €</p>
+            <button class="btn-add">Ajouter au panier</button>
+        </article>
+
+        <!-- Répéter pour d'autres produits -->
+    </section>
+</main>
 
 <?php include '../includes/footer.php'; ?>
