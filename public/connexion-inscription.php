@@ -6,7 +6,7 @@ include_once '../includes/auth.php';
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if (isset($_POST['email']) && isset($_POST['mot_de_passe'])) {
         $email = $_POST['email'];
-        $mot_de_passe = $_POST['mot_de_passe'];
+        $mot_de_passe = password_hash($_POST['mot_de_passe'], PASSWORD_DEFAULT);
         
         if (connecterClient($email, $mot_de_passe)) {
             header('Location: profil.php');
